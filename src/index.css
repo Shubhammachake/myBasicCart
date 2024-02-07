@@ -1,0 +1,124 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding-top: 50px;
+  gap: 10px;
+  margin: auto;
+  width: auto;
+}
+.grid-item {
+  background-color: rgb(246, 203, 210);
+  gap: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+}
+.grid-item p {
+  text-align: center;
+}
+.img {
+  width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .grid-container,
+  .grid-item {
+    width: auto;
+  }
+  .grid-item > img {
+    width: 30%;
+  }
+  .grid-item > p {
+    font-size: smaller;
+  }
+  .grid-item > h4 {
+    font-size: small;
+  }
+  .grid-container {
+    grid-template-columns: repeat(2, auto);
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .parent,
+  .child {
+    width: auto;
+  }
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .Total {
+    width: auto;
+  }
+  .Total h4 {
+    font-size: small;
+  }
+}
+.child {
+  border: 1px solid #ccc;
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-radius: 20px;
+  background-color: #fadceb;
+}
+.parent {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  gap: 16px;
+  margin: auto;
+  width: auto;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
+}
+.child img {
+  width: 50%;
+}
+
+.Total {
+  background-color: teal;
+}
+.Total h4 {
+  text-align: center;
+}
+
+@media screen and (max-width: 430px) {
+  .parent,
+  .child {
+    width: auto;
+  }
+  .child h3 {
+    font-size: small;
+  }
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+@media screen and (max-width: 769px) {
+  .parent,
+  .child {
+    width: auto;
+  }
+  .grid-container,
+  .grid-item {
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 50px) and (max-width: 280px) {
+  .parent,
+  .child {
+    width: auto;
+  }
+  .grid-container,
+  .grid-item {
+    width: auto !important ;
+  }
+}
